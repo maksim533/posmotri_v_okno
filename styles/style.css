@@ -156,6 +156,7 @@ ol {
   text-align: center;
   color: #fff;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .search-form__submit-button {
@@ -206,7 +207,7 @@ ol {
   align-items: flex-start;
 }
 
-.content__list-item:not(:nth-child(6)) {
+.content__list-item:not(:last-child) {
   margin-block-end: 34px;
 }
 
@@ -222,6 +223,10 @@ ol {
   line-height: 30px;
   text-transform: uppercase;
   margin-bottom: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 192px;
 }
 
 .content__video-card-description {
@@ -235,16 +240,18 @@ ol {
   inline-size: 194px;
   block-size: 103px;
   padding: 1px 1px 1px 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .more-button{
   inline-size: 100%;
-  margin: 2px;
+  margin-bottom: 2px;
 }
 
 /*   hover    */
 
-.search-form__label-text:hover{
+.search-form__label:has(.search-form__checkbox):hover{
   text-decoration: underline;
 }
 
@@ -255,6 +262,7 @@ ol {
 .button:hover{
   text-decoration: underline;
 }
+
 
 /*   hover    */
 
